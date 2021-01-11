@@ -17,10 +17,10 @@ require_once 'shippypro-flights.php';
 <body>
 
     <!-- NAVBAR -->
-    <nav class="navbar is-primary is-size-7 is-uppercase has-text-weight-semibold mb-4" role="navigation" aria-label="main navigation">
+    <nav class="navbar has-background-primary-dark is-size-7 is-uppercase has-text-weight-semibold mb-4" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
-                <a class="navbar-item" href="#">
+                <a class="navbar-item has-text-white" href="#">
                     <h1>Flight Scanner</h1>
                 </a>
             </div>
@@ -66,7 +66,7 @@ require_once 'shippypro-flights.php';
                     </div>
                 </div>
                 <div class="column">
-                    <button class="button is-primary is-rounded is-fullwidth">Search</button>
+                    <button class="button has-background-primary-dark has-text-white is-rounded is-fullwidth">Search</button>
                 </div>
             </div>
         </form>
@@ -77,7 +77,7 @@ require_once 'shippypro-flights.php';
     <section class="hero is-light is-bold has-text-centered mt-4">
         <div class="hero-body">
             <div class="container">
-                <span class="icon is-large has-text-primary">
+                <span class="icon is-large has-text-primary-dark">
                     <i class="fas fa-plane-departure fa-2x"></i>
                 </span>
                 <h1 class="title">
@@ -112,7 +112,7 @@ require_once 'shippypro-flights.php';
                             <div class="card-content">
                                 <div class="columns">
                                     <div class="column is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
-                                        <div class="icon has-text-primary mb-2">
+                                        <div class="icon has-text-primary-dark mb-2">
                                             <i class="fas fa-plane-departure"></i>
                                         </div>
                                         <h1><?php echo $_GET['my_code_departure']?></h1>
@@ -137,17 +137,17 @@ require_once 'shippypro-flights.php';
 
                                         <?php if ($results['stopover_price'] === null && $results['direct_price'] !== null && !$conf['my_direct_only']) : ?>
                                         <div>
-                                            no matching flights with stopovers! <span class="icon has-text-primary"><i class="far fa-grin-beam-sweat"></i></span>
+                                            no matching flights with stopovers! <span class="icon has-text-primary-dark"><i class="far fa-grin-beam-sweat"></i></span>
                                         </div>
                                         <?php endif ?>
 
 
                                         <?php if ($results['direct_price'] === null && $results['stopover_price'] === null) :?>
-                                            <div>OOPS <span class="icon has-text-primary"><i class="far fa-grin-beam-sweat"></i></span> no matching flights!</div>
+                                            <div>OOPS <span class="icon has-text-primary-dark"><i class="far fa-grin-beam-sweat"></i></span> no matching flights!</div>
                                         <?php endif ?>
                                     </div>
                                     <div class="column is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
-                                        <div class="icon has-text-primary mb-2">
+                                        <div class="icon has-text-primary-dark mb-2">
                                             <i class="fas fa-plane-arrival mb-2"></i>
                                         </div>
                                         <h1><?php echo $_GET['my_code_arrival']?></h1>
